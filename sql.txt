@@ -1,0 +1,43 @@
+-- phpMyAdmin SQL Dump
+-- version 3.2.0.1
+-- http://www.phpmyadmin.net
+--
+-- Host: localhost
+-- Generation Time: Nov 25, 2009 at 05:43 PM
+-- Server version: 5.1.36
+-- PHP Version: 5.3.0
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+
+--
+-- Database: `myhds1.5`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `chat`
+--
+
+CREATE TABLE IF NOT EXISTS `chat` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user` text NOT NULL,
+  `message` text NOT NULL,
+  `time` int(11) NOT NULL,
+  KEY `id` (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=74 ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `chat_sessions`
+--
+
+CREATE TABLE IF NOT EXISTS `chat_sessions` (
+  `ip` text NOT NULL,
+  `user` text NOT NULL,
+  `lasttalk` int(11) NOT NULL,
+  `lastcheck` int(11) NOT NULL,
+  `uid` varchar(100) NOT NULL,
+  KEY `lastcheck` (`lastcheck`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
