@@ -403,13 +403,13 @@ ERP.Chat.FormChat = Ext.extend(Ext.form.FormPanel, {
                 scope:this,
                 value:this.uid
             }
-            ]
-        /* ,buttons:[{
+            ],
+            buttons:[{
 				text:'Enviar'
 				,formBind:true
 				,scope:this
 				,handler:this.submit
-			}] */
+			}]
         }; // eo config object
 
         // apply config
